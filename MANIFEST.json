@@ -1,0 +1,1 @@
+{"type": "primary", "version": 1, "sets": {"in": ["s.asm", "g.asm", "a.asm", "Makefile", "property.txt", "genkey.o", "unlock"], "out": ["s.c", "a.c", "property.txt", "g.c"]}, "name": "a2"}
