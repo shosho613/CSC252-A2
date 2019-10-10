@@ -17,7 +17,9 @@
              puts("Whoops! That's too small. Please enter a higher number!");
          }
      }
+      if(d == 0){
      puts("Sorry, did not understand your input. Repeating question.");
+      }
      }
  
  }
