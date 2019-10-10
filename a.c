@@ -6,6 +6,7 @@
      puts("Enter Ctrl+C To Exit: ");
      scanf("%d", d);
      if(d != 0){
+         puts("Enter a positive integer for key size:");
          if( d > 4){
              if(d < NP){
                  printf("%d is just right!", &d);
