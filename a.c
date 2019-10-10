@@ -8,7 +8,7 @@
      if(d != 0){
          if( d > 4){
              if(d < NP){
-                 printf("%d is just right!", d);
+                 printf("%d is just right!", &d);
                  return;
              }else{
                  puts("Whoops! That's too big. Please enter a smaller number!");
