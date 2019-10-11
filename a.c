@@ -1,15 +1,18 @@
+ #include <stdio.h>
+
  int NP = 14;
 
  void ask(){
      int d = 0;
      while (d == 0) { 
      puts("Enter Ctrl+C To Exit: ");
-     scanf("%d", d);
+     puts("Enter a positive integer for key size:");
+     scanf("%d", &d);
      if(d != 0){
-         puts("Enter a positive integer for key size:");
+         
          if( d > 4){
              if(d < NP){
-                 printf("%d is just right!", &d);
+                 printf("%d is just right!", d);
                  return;
              }else{
                  puts("Whoops! That's too big. Please enter a smaller number!");
