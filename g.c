@@ -1,4 +1,4 @@
-
+#include <stdint.h>
 void gp(uint64_t x,uint32_t y){
     int rax = x;
     int a = 0;

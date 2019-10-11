@@ -1,6 +1,4 @@
-#include <stdint.h>
 
-int ncmp = 4;
 
 #include <stdint.h>
 uint64_t ncmp = 4;
