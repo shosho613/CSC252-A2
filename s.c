@@ -1,7 +1,7 @@
 
 
 #include <stdint.h>
-uint64_t ncmp = 4;
+long int ncmp = 4;
 
 int x(uint64_t rdi, uint64_t rsi){
     uint64_t rax = rdi;
