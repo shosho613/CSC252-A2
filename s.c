@@ -1,24 +1,30 @@
-
-
 #include <stdint.h>
-long int ncmp = 4;
+#include <stdio.h>
+#include <stdio.h>
 
-int x(uint64_t rdi, uint64_t rsi){
-    uint64_t rax = rdi;
-    uint32_t edx = (uint32_t) rax; // take highest 32 bits of both parameters
-    rax = rsi;
-    uint32_t edx2 = (uint32_t) rax;
-    rdi = rax;
-    return edx2;
+int ncmp = 4;
 
+void x(int *a, int *b) {
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-void s(uint64_t rdi, uint32_t esi){
-    int x= 1;
-
-    if(rdi > x){
-        
-    }
-
-
+int s(int *a, int b) {
+	int eax = 1;
+	while (eax < b) {
+		int rax = eax;
+		while (rax > 0) {
+			if ((unsigned int) a[rax-1] < (unsigned int) a[rax]) {
+				x(&a[rax], &a[rax-1]);
+				
+				rax--;
+			} else
+				break;
+		}
+        ncmp++;
+		eax++;
+	}
+    ncmp--;
+	return eax;
 }

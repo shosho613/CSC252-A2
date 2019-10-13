@@ -8,6 +8,9 @@ NP:
 	.string	"Press CTRL+C to exit."
 	.align 8
 .LC1:
+	 .string "Enter a positive integer for key size: "
+
+	 .align 8
 .LC2:
 	.string	"%d"
 	.align 8
@@ -29,10 +32,10 @@ ask:
 	call	puts
 .L7:
 	leaq	.LC1(%rip), %rdi
-	movl	$0, %eax
-	call	printf
-	leaq	-4(%rbp), %rax
-	movq	%rax, %rsi
+	movl	$0, %eax eax = 0;
+	call	printf //call printf lc1
+	leaq	-4(%rbp), %rax rax = adress of -4
+	movq	%rax, %rsi rsi = rax
 	leaq	.LC2(%rip), %rdi
 	movl	$0, %eax
 	call	scanf
@@ -51,7 +54,7 @@ ask:
 .L4:
 	movl	-4(%rbp), %edx
 	movl	NP(%rip), %eax
-	cmpl	%eax, %edx
+	cmpl	%eax, %edx if edx is less than or eqaul to eax
 	jle	.L5
 	leaq	.LC5(%rip), %rdi
 	call	puts
